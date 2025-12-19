@@ -1,0 +1,6 @@
+
+4. Foret et al., "Sharpness-Aware Minimization for Efficiently Improving Generalization", In ICLR 2021 (Spotlight)
+
+    -> Mollenhoff et al., "SAM as an Optimal Relaxation of Bayes", In ICLR 2023 (Oral)
+
+    -> Lee and Yoon, "Flat Reward in Policy Parameter Space Implies Robust Reinforcement Learning", In ICLR 2025 (Oral)
