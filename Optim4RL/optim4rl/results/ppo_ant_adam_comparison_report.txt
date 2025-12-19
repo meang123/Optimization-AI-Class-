@@ -1,0 +1,52 @@
+================================================================================
+PPO ANT NON-STATIONARY: ADAM OPTIMIZER COMPARISON REPORT
+================================================================================
+
+📊 OPTIMIZER CONFIGURATIONS
+--------------------------------------------------------------------------------
+Standard Adam:
+  - Learning Rate: 3e-4
+  - b1: 0.9 (default)
+  - b2: 0.999 (default)
+
+Modified Adam:
+  - Learning Rate: 3e-4
+  - b1: 0.997
+  - b2: 0.997
+
+📈 OVERALL PERFORMANCE STATISTICS
+--------------------------------------------------------------------------------
+Metric                    Standard             Adam (b1=b2=0.997)   Difference     
+--------------------------------------------------------------------------------
+Total Episodes            21                   21                   0              
+Mean Return               2,902.76             1,774.12             -1,128.64
+Std Dev                   1,729.27             596.83             -1,132.45
+Max Return                5,837.71             3,016.49             -2,821.22
+Min Return                -200.77             -87.12             +113.65
+CV (Stability)            0.596                 0.336                 -0.259
+
+📉 PERFORMANCE DEGRADATION
+--------------------------------------------------------------------------------
+Metric                    Standard             Adam (b1=b2=0.997)   Difference     
+--------------------------------------------------------------------------------
+Early Training Mean       3,884.42             1,815.30             -2,069.12
+Late Training Mean        2,010.34             1,736.69             -273.65
+Performance Drop          48.2%                4.3%                -43.9%
+
+⚠️  POLICY COLLAPSE ANALYSIS
+--------------------------------------------------------------------------------
+Metric                    Standard             Adam (b1=b2=0.997)   Difference     
+--------------------------------------------------------------------------------
+Collapse Events           1                    0                    -1
+Collapse Rate             4.76%                0.00%                -4.76%
+
+================================================================================
+🎯 CONCLUSION
+================================================================================
+✅ STANDARD ADAM SUPERIOR: Significantly better mean performance
+
+Key Findings:
+  • Mean return difference: -1128.64 (-38.9%)
+  • Stability (CV): Standard 0.596 vs Adam 0.336
+  • Collapse events: Standard 1 vs Adam 0
+  • Performance drop: Standard 48.2% vs Adam 4.3%

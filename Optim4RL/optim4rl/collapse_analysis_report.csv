@@ -1,0 +1,3 @@
+Model,Total_Collapses,Collapse_Rate_per_1000,Stability_Score,Mean_Reward,Std_Reward,Min_Reward,Max_Reward,Mean_Drop_Pct,Max_Drop_Pct
+Non-Tested (no L2),0,0.0,inf,-779.8695491715973,943.3798851212442,-1723.40625,2034.542236328125,0.0,0.0
+L2-Reg (1e-4),0,0.0,inf,-137.46415987201766,472.20989824381917,-866.4463500976562,1064.834228515625,0.0,0.0

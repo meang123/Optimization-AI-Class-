@@ -1,0 +1,12 @@
+Metric,Model 1 (no L2),Model 2 (L2=1e-4)
+Total Iterations,51,51
+Collapse Events,0,8
+Mean Return,-779.87,-137.46
+Std Return,943.38,472.21
+Median Return,-1099.99,-335.22
+Min Return,-1723.41,-866.45
+Max Return,2034.54,1064.83
+Stability Score,0.1105,1.4614
+Positive Returns (%),11.8,27.5
+Mean Collapse Drop (%),0.00,553.71
+Max Collapse Drop (%),0.00,2267.52

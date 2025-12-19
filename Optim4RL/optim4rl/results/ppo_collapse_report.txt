@@ -1,0 +1,52 @@
+================================================================================
+PPO ANT NON-STATIONARY: POLICY COLLAPSE ANALYSIS REPORT
+================================================================================
+
+📊 OVERALL PERFORMANCE STATISTICS
+--------------------------------------------------------------------------------
+Total Episodes:           21
+Total Training Steps:     996,147,200
+Mean Return:              2,902.76 ± 1,729.27
+Median Return:            2,404.31
+Max Return:               5,837.71 (at step 99,614,720)
+Min Return:               -200.77 (at step 0)
+Coefficient of Variation: 0.596 (σ/μ)
+
+🔍 POLICY COLLAPSE ANALYSIS
+--------------------------------------------------------------------------------
+Collapse Events Detected: 1 / 21 episodes
+Collapse Rate:            4.76%
+
+📉 PERFORMANCE DEGRADATION
+--------------------------------------------------------------------------------
+Early Training Mean:      3,884.42 (first half)
+Late Training Mean:       2,010.34 (second half)
+Performance Drop:         48.2%
+Peak to Nadir Drop:       103.4%
+
+📊 STABILITY ASSESSMENT
+--------------------------------------------------------------------------------
+Stability Rating:         LOW (Unstable)
+  - CV < 0.3: High stability
+  - CV 0.3-0.5: Medium stability
+  - CV > 0.5: Low stability (CURRENT: 0.596)
+
+⚠️  COLLAPSE SEVERITY
+--------------------------------------------------------------------------------
+Collapse Severity:        MODERATE (30-50% drop)
+  - >50%: Severe collapse
+  - 30-50%: Moderate collapse
+  - 15-30%: Mild degradation
+  - <15%: Minimal impact
+  - CURRENT: 48.2% drop
+
+================================================================================
+🎯 CONCLUSION
+================================================================================
+❌ POLICY COLLAPSE CONFIRMED: Severe performance degradation and high instability
+
+Key Findings:
+  • Performance dropped 48.2% from early to late training
+  • 1 collapse events detected (4.8% of episodes)
+  • Training stability is Unstable
+  • Peak performance: 5,838, Worst: -201

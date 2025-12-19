@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inference Videos - Iteration 5</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .info-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .video-card h2 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .video-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .info-value {
+            color: #333;
+        }
+
+        .reward {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .reward.negative {
+            color: #e74c3c;
+        }
+
+        .reward.positive {
+            color: #27ae60;
+        }
+
+        .video-link {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .video-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎥 Inference Videos</h1>
+        <div class="subtitle">Iteration 5 - Learned Optim4RL on Non-Stationary Ant</div>
+
+        <div class="info-box">
+            <h3>Experiment Information</h3>
+            <p><strong>Model:</strong> Learned Optim4RL (ppo_ant_non_tested)</p>
+            <p><strong>Training Iteration:</strong> 5</p>
+            <p><strong>Environment:</strong> Non-Stationary Ant (Brax)</p>
+            <p><strong>Episodes:</strong> 3</p>
+        </div>
+
+        <div class="stats-summary">
+            <div class="stat-card">
+                <div class="stat-label">Total Episodes</div>
+                <div class="stat-value">3</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Average Reward</div>
+                <div class="stat-value">-421</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Best Episode</div>
+                <div class="stat-value">Episode 3</div>
+            </div>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <h2>Episode 1</h2>
+                <div class="video-info">
+                    <div class="info-item">
+                        <span class="info-label">Iteration:</span>
+                        <span class="info-value">5</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Episode:</span>
+                        <span class="info-value">1</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Reward:</span>
+                        <span class="info-value reward negative">-396</span>
+                    </div>
+                </div>
+                <a href="inference_param_iter5_episode1_reward-396.html" class="video-link">
+                    ▶ Watch Video
+                </a>
+            </div>
+
+            <div class="video-card">
+                <h2>Episode 2</h2>
+                <div class="video-info">
+                    <div class="info-item">
+                        <span class="info-label">Iteration:</span>
+                        <span class="info-value">5</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Episode:</span>
+                        <span class="info-value">2</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Reward:</span>
+                        <span class="info-value reward negative">-517</span>
+                    </div>
+                </div>
+                <a href="inference_param_iter5_episode2_reward-517.html" class="video-link">
+                    ▶ Watch Video
+                </a>
+            </div>
+
+            <div class="video-card">
+                <h2>Episode 3</h2>
+                <div class="video-info">
+                    <div class="info-item">
+                        <span class="info-label">Iteration:</span>
+                        <span class="info-value">5</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Episode:</span>
+                        <span class="info-value">3</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Reward:</span>
+                        <span class="info-value reward negative">-351</span>
+                    </div>
+                </div>
+                <a href="inference_param_iter5_episode3_reward-351.html" class="video-link">
+                    ▶ Watch Video
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Generated for Optim4RL Non-Stationary Ant Experiment</p>
+            <p>Click on any video card to view the episode visualization</p>
+        </footer>
+    </div>
+</body>
+</html>

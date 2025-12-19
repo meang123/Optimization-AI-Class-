@@ -1,0 +1,47 @@
+{
+  "env": [{
+    "name": ["ant"],
+    "train_steps": [1e9],
+    "episode_length": [1000],
+    "action_repeat": [1],
+    "reward_scaling": [10],
+    "num_envs": [2048],
+    "normalize_obs": [true],
+    "non_stationary": [true],
+    "task_type": ["ant"]
+  }],
+  "agent": [{
+    "name": ["MetaPPO"],
+    "inner_updates": [2],
+    "gae_lambda": [0.95],
+    "rollout_steps": [3],
+    "num_minibatches": [4],
+    "clipping_epsilon": [0.3],
+    "update_epochs": [4],
+    "entropy_weight": [1e-2],
+    "reset_interval": [128]
+  }],
+  "agent_optim": [{
+    "name": ["Adam"],
+    "kwargs": [{
+      "learning_rate": [3e-4],
+      "grad_clip": [1.0],
+      "weight_decay": [1e-4]
+    }]
+  }],
+  "meta_optim": [{
+    "name": ["Adam"],
+    "kwargs": [{
+      "learning_rate": [3e-4],
+      "grad_clip": [1.0],
+      "weight_decay": [1e-4]
+    }]
+  }],
+  "display_interval": [10],
+  "save_param": [100000],
+  "batch_size": [512],
+  "discount": [0.97],
+  "max_devices_per_host": [-1],
+  "seed": [1],
+  "generate_random_seed": [true]
+}

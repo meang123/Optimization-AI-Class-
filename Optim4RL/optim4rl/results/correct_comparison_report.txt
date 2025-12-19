@@ -1,0 +1,48 @@
+================================================================================
+CORRECT EXPERIMENT COMPARISON REPORT
+================================================================================
+
+Generated: 2025-12-12 08:56:26.785313
+
+Experiment 1: Adam Baseline (ppo_ant_nonstationary)
+  - Config: configs/ppo_ant_nonstationary.json
+  - Optimizer: Adam
+  - Environment: Non-stationary Ant
+
+Experiment 2: Learned Optim4RL (ppo_ant_non_tested)
+  - Config: configs/ppo_ant_non_tested.json
+  - Optimizer: Learned Optim4RL
+  - Environment: Non-stationary Ant
+
+================================================================================
+RESULTS
+================================================================================
+
+Adam Baseline:
+  mean: 2902.76
+  std: 1729.27
+  min: -200.77
+  max: 5837.71
+  median: 2404.31
+  final_10_mean: 2021.94
+  Collapsed: False
+
+Learned Optim4RL:
+  mean: -779.87
+  std: 943.38
+  min: -1723.41
+  max: 2034.54
+  median: -1099.99
+  final_10_mean: -1233.34
+  Collapsed: True
+
+================================================================================
+ANALYSIS
+================================================================================
+
+Performance Difference:
+  Learned Optim4RL vs Adam: -126.87%
+  ✗ Learned optimizer is WORSE by 126.87%
+
+Collapse Detection:
+  ✗ Learned optimizer collapsed, Adam remained stable

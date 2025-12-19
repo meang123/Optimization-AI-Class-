@@ -1,0 +1,9 @@
+Metric,Default Adam (b1≠b2),Equal Beta Adam (b1=b2)
+Mean Return,3529.14,1883.39
+Std Return,1357.56,706.46
+Peak Return,5449.74,3048.24
+Lowest Return,-118.62,-126.26
+Performance Drop,5568.36,3174.51
+Coefficient of Variation,0.385,0.375
+Avg Rolling Std,736.47,375.35
+Collapse Detected,Yes,Yes

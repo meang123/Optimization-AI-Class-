@@ -1,0 +1,52 @@
+================================================================================
+PPO ANT NON-STATIONARY: POLICY COLLAPSE ANALYSIS REPORT
+================================================================================
+
+📊 OVERALL PERFORMANCE STATISTICS
+--------------------------------------------------------------------------------
+Total Episodes:           21
+Total Training Steps:     996,147,200
+Mean Return:              -1,465.06 ± 851.42
+Median Return:            -1,601.77
+Max Return:               1,142.44 (at step 49,807,360)
+Min Return:               -2,397.22 (at step 747,110,400)
+Coefficient of Variation: -0.581 (σ/μ)
+
+🔍 POLICY COLLAPSE ANALYSIS
+--------------------------------------------------------------------------------
+Collapse Events Detected: 1 / 21 episodes
+Collapse Rate:            4.76%
+
+📉 PERFORMANCE DEGRADATION
+--------------------------------------------------------------------------------
+Early Training Mean:      -800.01 (first half)
+Late Training Mean:       -2,069.65 (second half)
+Performance Drop:         -158.7%
+Peak to Nadir Drop:       309.8%
+
+📊 STABILITY ASSESSMENT
+--------------------------------------------------------------------------------
+Stability Rating:         HIGH (Stable)
+  - CV < 0.3: High stability
+  - CV 0.3-0.5: Medium stability
+  - CV > 0.5: Low stability (CURRENT: -0.581)
+
+⚠️  COLLAPSE SEVERITY
+--------------------------------------------------------------------------------
+Collapse Severity:        MINIMAL (<15% drop)
+  - >50%: Severe collapse
+  - 30-50%: Moderate collapse
+  - 15-30%: Mild degradation
+  - <15%: Minimal impact
+  - CURRENT: -158.7% drop
+
+================================================================================
+🎯 CONCLUSION
+================================================================================
+✅ STABLE TRAINING: No significant policy collapse detected
+
+Key Findings:
+  • Performance dropped -158.7% from early to late training
+  • 1 collapse events detected (4.8% of episodes)
+  • Training stability is Stable
+  • Peak performance: 1,142, Worst: -2,397
